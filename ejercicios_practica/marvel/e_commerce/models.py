@@ -27,6 +27,7 @@ class Comic(models.Model):
     picture = models.URLField(
         verbose_name='pictures', default='')
 
+
     class Meta:
         '''
         Con "class Meta" podemos definir atributos de nuestras entidades como el nombre de la tabla.
@@ -43,12 +44,12 @@ class Comic(models.Model):
 
 class WishList(models.Model):
     id = models.BigAutoField(db_column='ID', primary_key=True)
-    user_id = models.ForeignKey(User,
+    user = models.ForeignKey(User,
                                 verbose_name='User',
                                 on_delete=models.DO_NOTHING,
                                 default=1, blank=True
                                 )
-    comic_id = models.ForeignKey(Comic,
+    comic = models.ForeignKey(Comic,
                                  verbose_name='Comic',
                                  on_delete=models.DO_NOTHING,
                                  default=1, blank=True

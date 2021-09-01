@@ -1,0 +1,13 @@
+.table, tr, td{
+    border: 2px solid black;
+}
+
+.td-comic-details ul{
+    list-style: square inside;
+    padding-left: 10px;
+}
+
+.td-comic-details ul li{
+    padding-bottom: 20px;
+    font-size: 17px;
+}

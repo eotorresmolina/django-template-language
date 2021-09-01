@@ -1,0 +1,35 @@
+{% extends 'e-commerce/home.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block titulo_pag %}Comic{% endblock %}</title>
+    </head>
+    <body>
+        <h1>{% block title %}Comic's List{% endblock %}</h1>
+        <div>
+            {% block content %}
+                {% load static %}
+                <link rel="stylesheet" href="{% static 'e-commerce/css/comic.css' %}">
+                <table class="table">
+                    {% for comic in comics %}
+                        <tr>
+                            <td>
+                                <img src="{{ comic.picture }}">
+                            </td>
+                            <td class="td-comic-details">
+                                <ul>
+                                    <li><b>ID: </b>{{ comic.marvel_id }}</li>
+                                    <li><b>TITLE: </b>{{ comic.title }}</li>
+                                    <li><b>DESCRIPTION: </b>{{ comic.description }}</li>
+                                    <li><b>PRICE: </b>{{ comic.price }} USD</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% endblock %}
+        </div>
+    </body>
+</html>

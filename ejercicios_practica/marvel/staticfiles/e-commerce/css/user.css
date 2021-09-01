@@ -1,0 +1,13 @@
+.data-user__ul{
+    list-style: square inside;
+    padding-left: 10px;
+}
+
+.data-user__ul li{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.data-user__ul li b{
+    text-transform: uppercase;
+}

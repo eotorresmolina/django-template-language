@@ -1,0 +1,22 @@
+{% extends "e-commerce/home.html" %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <meta charset='utf-8'>
+        <title>{% block titulo_pag %}{{ page_title }}{% endblock %}</title>
+    <body>
+        <h1 class="h1-login">{% block title %}{{ title }}{%endblock%}</h1>
+        {% block content %}
+        <div class="form-login">
+            <link rel="stylesheet" href="{% static '/e-commerce/css/login.css' %}">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input id="submit" type="submit" value="Login">
+            </form>
+        </div>
+        {%endblock%}
+    </body>
+</html>

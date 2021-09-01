@@ -1,0 +1,26 @@
+.bar{
+    font-size: 16px;
+    background-color: black;
+}
+
+.bar__nav{
+    font-size: 1.5em;
+}
+
+.bar__nav-ul{
+    padding: 0px;
+    margin: 0px;
+}
+
+.bar__nav-ul li{
+    display: inline;
+    margin: 0px 30px 0px 0px;
+    text-transform: uppercase;
+}
+
+.bar__nav-ul li a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
